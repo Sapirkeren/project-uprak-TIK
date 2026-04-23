@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #4b4088; /* Deep purple Y2K */
+    color: #fff;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+/* KOTAK UTAMA (WRAPPER) */
+.wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: #5b5098;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+/* EA TOP BAR */
+.ea-top-bar {
+    background-color: #222;
+    color: #ccc;
+    font-size: 0.75rem;
+    text-align: right;
+    padding: 5px 20px;
+    border-bottom: 2px solid #000;
+}
+.ea-top-bar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 8px;
+    border-right: 1px solid #555;
+}
+.ea-top-bar a:last-child {
+    border-right: none;
+}
+.ea-top-bar a.green-link {
+    color: #00ff00;
+}
+
+/* HEADER - LOGO AREA */
+header {
+    background: linear-gradient(to right, #1d1841, #383060, #1d1841);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #8b8bff;
+    position: relative;
+}
+
+@keyframes floatLogo {
+    0% { transform: translateY(0px) rotate(-3deg); }
+    50% { transform: translateY(-5px) rotate(-3deg); }
+    100% { transform: translateY(0px) rotate(-3deg); }
+}
+
+.logo-container {
+    display: inline-block;
+    background: radial-gradient(ellipse at center, #0a1b64 0%, #000033 100%);
+    border: 3px solid #8b8bff;
+    border-radius: 50%;
+    padding: 20px 40px;
+    transform: rotate(-3deg);
+    box-shadow: inset 0 0 10px #fff, 5px 5px 15px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+    animation: floatLogo 3s ease-in-out infinite;
+}
+
+.logo-text {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000, -1px -1px 0 #8b8bff;
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+.deskripsi-singkat {
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* CURVED SEPARATOR (Y2K METALLIC) */
+.separator {
+    height: 15px;
+    background: linear-gradient(to bottom, #dcdcdc 0%, #888 50%, #444 100%);
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #fff;
+    width: 100%;
+}
+
+/* MARQUEE TEKS JADUL */
+marquee {
+    background-color: #102b8a;
+    color: #fff;
+    font-family: Tahoma, sans-serif;
+    font-size: 1rem;
+    padding: 5px;
+    border-bottom: 2px solid #000;
+}
+
+/* LAYOUT UTAMA KIRI-KANAN */
+.main-layout {
+    display: flex;
+    min-height: 600px;
+}
+
+/* SIDEBAR KIRI (NAVIGASI) */
+.sidebar {
+    width: 220px;
+    background-color: #2b2353;
+    padding: 15px 10px;
+    border-right: 2px solid #1a1532;
+}
+.sidebar-section {
+    margin-bottom: 20px;
+}
+.sidebar-title {
+    color: #fff;
+    font-family: 'Arial Black', sans-serif;
+    padding: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid #5a5abb;
+    margin-bottom: 10px;
+}
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-nav li {
+    margin-bottom: 5px;
+}
+.sidebar-nav a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px;
+    background-color: #102b8a;
+    font-family: Tahoma, sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 2px solid;
+    /* 3D Outset Button Effect */
+    border-top-color: #5a5abb;
+    border-left-color: #5a5abb;
+    border-bottom-color: #050e30;
+    border-right-color: #050e30;
+    transition: all 0.1s;
+}
+.sidebar-nav a:hover, .sidebar-nav a.active {
+    background-color: #0a1b64;
+    /* 3D Inset Button Effect */
+    border-top-color: #050e30;
+    border-left-color: #050e30;
+    border-bottom-color: #5a5abb;
+    border-right-color: #5a5abb;
+    color: #00ff00;
+}
+
+/* AREA KONTEN (KANAN) */
+.content-area {
+    flex: 1;
+    padding: 20px;
+    background-color: #6c61a8;
+}
+.content-area h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #000;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4b4088;
+    padding-bottom: 5px;
+}
+.content-area p {
+    font-family: Tahoma, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #eee;
+}
+
+/* ELEMEN RETRO / EFEK */
+.blink {
+    animation: blinker 1s linear infinite;
+    color: #00ff00;
+}
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+@keyframes pulseBadge {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.new-badge {
+    color: #fff;
+    background-color: #ff0000;
+    font-weight: bold;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    margin-left: 5px;
+    border: 1px solid #fff;
+    display: inline-block;
+    font-family: Tahoma, sans-serif;
+    border-radius: 3px;
+    animation: pulseBadge 1.5s infinite;
+}
+
+/* KOTAK KONTEN (SIMS BOX) */
+.sims-box {
+    background: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
+    color: #000;
+    border: 2px solid #222;
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+    box-shadow: inset 0 0 5px #fff, 3px 3px 8px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.sims-box:hover {
+    transform: translateY(-5px);
+    box-shadow: inset 0 0 5px #fff, 5px 5px 15px rgba(0,0,0,0.6);
+}
+.sims-box p {
+    color: #222;
+}
+.sims-box img {
+    width: 100%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    display: block;
+}
+.box-title {
+    font-family: 'Arial Black', sans-serif;
+    background: #102b8a;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    margin: -15px -15px 10px -15px;
+    border-bottom: 2px solid #000;
+}
+
+/* FOTO PROFIL */
+.profile-pic {
+    max-width: 200px;
+    height: auto;
+    border: 3px solid #102b8a;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+/* TABEL JADUL */
+.retro-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+}
+.retro-table th, .retro-table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+.retro-table th {
+    background-color: #102b8a;
+    color: #fff;
+    font-family: 'Arial Black', sans-serif;
+}
+.retro-table tr:nth-child(even) {
+    background-color: #eef;
+}
+
+/* GRID PROJECTS */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.85rem;
+    border-top: 2px solid #000;
+}
+
+/* PIXEL PARTICLES (UNTUK JS) - PLUMBOB COLORS */
+.pixel {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #00ff00;
+    border: 1px solid #fff;
+    transform: rotate(45deg);
+    pointer-events: none;
+    z-index: 9999;
+}
